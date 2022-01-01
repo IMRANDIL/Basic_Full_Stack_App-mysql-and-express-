@@ -30,6 +30,20 @@ app.get('/products', (req, res) => {
 
         }
     })
+});
+
+
+app.get('/products/add', (req, res) => {
+    const { name, price } = req.query;
+    const INSERT_DATA = `INSERT INTO products (name, price) VALUES('${name}','${price}')`
+    pool.query(INSERT_DATA, (err, result) => {
+        if (err) {
+            return res.send(err);
+        }
+        else {
+            return res.send('successfully added the data')
+        }
+    })
 })
 
 
