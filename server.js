@@ -13,7 +13,7 @@ const SELECT_ALL = 'SELECT * FROM products';
 
 
 app.get('/', (req, res) => {
-    res.send(`<h1 style="text-align:center">Hello From Express Server</h1><a href="http://localhost:5000/products" style="background:red; padding:10px 20px; color:white;">Go To Products Api</a>`)
+    res.send(`<h1 style="text-align:center">Hello From Express Server</h1><a href="http://localhost:5000/products" style="background:red; padding:10px 20px; color:white; text-decoration:none; font-size:2em">Go To Products Api</a>`)
 })
 
 
